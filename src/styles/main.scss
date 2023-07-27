@@ -1,0 +1,50 @@
+html {
+    height: 100vh;
+
+    body {
+        background-color: #181818;
+        color: #ffffff;
+        font-family: 'Roboto', sans-serif;
+
+        .main-content-header {
+            margin-top: 4vw;
+            margin-bottom: 10px;
+            padding: 0 3%;
+
+            h1 {
+                font-size: 3rem;
+                font-weight: 900;
+                line-height: 1.2;
+                text-shadow: 2px 2px 4px rgba(0,0,0,.4);
+                margin-bottom: 10px;
+            }
+
+            p {
+                font-size: 19px;
+                margin-top: 0.1vw;
+                text-shadow: 2px 2px 4px rgba(0,0,0,.6);
+            }
+        }
+        
+        .projects-row {
+            overflow: clip;
+            margin-top: 40px;
+
+            .projects {
+                display: flex;
+                margin: 0 -10px;
+
+                .project {
+                    list-style: none;
+                    padding: 0 10px;
+                    ;
+                    .project-image {
+                        max-width: 400px;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
