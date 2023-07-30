@@ -36,12 +36,35 @@ html {
 
                 .project {
                     list-style: none;
-                    padding: 0 10px;
-                    ;
+
+                    &.active {
+                        display: block;
+                    }
+
+                    &.hidden {
+                        display: none;
+                    }
+
+                    &:first-child {
+                        padding-right: 5px;
+                    }
+                   
+                    
+                    &:not(:first-child) {
+                        padding: 0 5px;
+                    }
+
+
                     .project-image {
-                        max-width: 400px;
+                        max-width: 600px;
                     }
                 }
+            }
+
+            .slider-icons {
+                padding: 0 3%;
+                display: flex;
+                gap: 10px;
             }
         }
     }
