@@ -4,7 +4,6 @@ const slider = document.querySelectorAll('.project');
 const sliderNext = document.querySelector('.next');
 const sliderPrev = document.querySelector('.prev');
 
-
 function toggleActiveClass() {
     const activeSlide = document.querySelector('.project.active');
     let targetSlide;
@@ -20,8 +19,6 @@ function toggleActiveClass() {
     targetSlide.classList.toggle('active');
     targetSlide.classList.toggle('hidden');
 }
-
-
 
 sliderNext.addEventListener( 'click', toggleActiveClass);
 sliderPrev.addEventListener( 'click', toggleActiveClass);
