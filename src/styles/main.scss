@@ -34,20 +34,30 @@ html {
                 display: flex;
                 margin: 0 -10px;
 
-            
-
                 .project {
                     list-style: none;
                     background-color: charcoal;
+                    position: relative;
+                    overflow: hidden;
 
                     img {
                         transition-property: opacity;
                         transition: 1s ease;
 
                         &:hover {
-                            opacity: .25;
+                            opacity: .1;
+
+                            +.project-text {
+                                animation: slideInFromRight 1s ease;
+                                position: absolute;
+                                top: 20%;
+                                left: 5%;
+                                font-size: 64px;
+                                pointer-events: none;
+                            }    
                         }
                     }
+
 
                     &.active {
                         display: block;
@@ -60,6 +70,11 @@ html {
                     .project-image {
                         max-width: 800px;
                     }
+
+                    .project-text {
+                        position: absolute;
+                        left: 999px;
+                    } 
                 }
             }
 
@@ -96,7 +111,13 @@ html {
   }
 
   .project.active {
-    animation: slideInFromRight 1s ease;
+    &.left {
+        animation: slideInFromLeft 1s ease;
+    }
+
+    &.right {
+        animation: slideInFromRight 1s ease;
+    }
   }
 
 
