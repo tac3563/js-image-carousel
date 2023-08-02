@@ -2,92 +2,111 @@ html {
     height: 100vh;
 
     body {
-        background-color: #181818;
-        color: #ffffff;
-        font-family: 'Roboto', sans-serif;
+        background-color: #ffffff;
+        color: #000000;
+        font-family: 'Inter', sans-serif;
+        margin: 0;
 
-        .main-content-header {
-            margin-top: 4vw;
-            margin-bottom: 10px;
-            padding: 0 3%;
+        .body-container {
+            max-width: 1400px;
+            padding: 0 10px;
+            margin: 0 auto;
 
-            h1 {
-                font-size: 3rem;
-                font-weight: 900;
-                line-height: 1.2;
-                text-shadow: 2px 2px 4px rgba(0,0,0,.4);
-                margin-bottom: 10px;
+            .main-content-header {
+                margin: 5em auto 1em auto;
+            
+                h1 {
+                    font-size: 5rem;
+                    font-weight: 700;
+                    line-height: 1.2;
+                    margin-bottom: 10px;
+                    text-align: center;
+                }
+    
+                p {
+                    font-size: 1.125rem;
+                    margin: 1em auto;
+                    text-align: center;
+                }
             }
+            
+            .projects-row {
+                overflow: clip;
+                margin-top: 40px;
+    
+                .projects {
+                    display: flex;
+                    justify-content: center;
+                    padding: 0;
+                    margin: 3.25em auto .5em auto;
 
-            p {
-                font-size: 19px;
-                margin-top: 0.1vw;
-                text-shadow: 2px 2px 4px rgba(0,0,0,.6);
-            }
-        }
-        
-        .projects-row {
-            overflow: clip;
-            margin-top: 40px;
-
-            .projects {
-                display: flex;
-                margin: 0 -10px;
-
-                .project {
-                    list-style: none;
-                    background-color: charcoal;
-                    position: relative;
-                    overflow: hidden;
-
-                    img {
-                        transition-property: opacity;
-                        transition: 1s ease;
-
-                        &:hover {
-                            opacity: .1;
-
-                            +.project-text {
-                                animation: slideInFromRight 1s ease;
-                                position: absolute;
-                                top: 20%;
-                                left: 5%;
-                                font-size: 64px;
-                                pointer-events: none;
-                            }    
+                    @media (min-width: 599px) {
+                        margin: 6.5em auto 1em auto; 
+                    }
+    
+                    .project {
+                        list-style: none;
+                        background-color: charcoal;
+                        position: relative;
+                        overflow: hidden;
+    
+                        img {
+                            transition-property: opacity;
+                            transition: 1s ease;
+                            max-width: 800px;
+                            width: 100%;
+                            height: auto;
+                            aspect-ratio: 2 / 1;
+                            object-fit: cover;
+                            border-radius: 40px;
+    
+                            &:hover {
+                                opacity: .5;
+                                cursor: pointer;
+    
+                                +.project-text {
+                                    animation: slideInFromRight 1s ease;
+                                    position: absolute;
+                                    top: 20%;
+                                    left: 5%;
+                                    font-size: 64px;
+                                    pointer-events: none;
+                                }    
+                            }
                         }
+    
+    
+                        &.active {
+                            display: block;
+                        }
+    
+                        &.hidden {
+                            display: none;
+                        }
+    
+                        .project-image {
+                            max-width: 800px;
+                        }
+    
+                        .project-text {
+                            position: absolute;
+                            left: 999px;
+                        } 
                     }
-
-
-                    &.active {
-                        display: block;
-                    }
-
-                    &.hidden {
-                        display: none;
-                    }
-
-                    .project-image {
-                        max-width: 800px;
-                    }
-
-                    .project-text {
-                        position: absolute;
-                        left: 999px;
-                    } 
                 }
-            }
-
-            .slider-icons {
-                padding: 0 3%;
-                display: flex;
-                gap: 10px;
-
-                &:hover {
-                    cursor: pointer;
+    
+                .slider-icons {
+                    display: flex;
+                    justify-content: center;
+                    gap: 20px;
+    
+                    &:hover {
+                        cursor: pointer;
+                    }
                 }
             }
         }
+      
     }
 
 }
