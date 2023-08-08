@@ -1,32 +1,44 @@
 html {
     min-height: 100vh;
+    width: 100%;
+    overflow: clip;
 
     body {
         background-color: #ffffff;
         color: #000000;
         font-family: 'Inter', sans-serif;
         margin: 0;
+        width: 100%;
 
         .body-container {
             max-width: 1400px;
-            padding: 0 10px;
+            width: 100%;
             margin: 0 auto;
 
             .main-content-header {
                 margin: 5em auto 1em auto;
+                padding: 0 10px;
             
                 h1 {
-                    font-size: 5rem;
+                    font-size: 4rem;
                     font-weight: 700;
                     line-height: 1.2;
                     margin-bottom: 10px;
                     text-align: center;
+
+                    @media (min-width: 599px) {
+                        font-size: 5rem;
+                    }
                 }
     
                 p {
-                    font-size: 1.125rem;
+                    font-size: 0.875rem;
                     margin: 1em auto;
                     text-align: center;
+
+                    @media (min-width: 599px) {
+                        font-size: 1.125rem;
+                    }
                 }
             }
             
@@ -48,17 +60,22 @@ html {
                         list-style: none;
                         background-color: charcoal;
                         overflow: hidden;
-                        transition-property: transform 1s ease;
+                        transition: ease .2s;
+                        // transition-property: opacity none;
     
                         img {
                             transition-property: opacity;
                             transition: 1s ease;
-                            max-width: 800px;
+                            max-width: 600px;
                             width: 100%;
                             height: auto;
                             aspect-ratio: 2 / 1;
                             object-fit: cover;
                             border-radius: 40px;
+
+                            @media (min-width: 1149px) {
+                                max-width: 800px;
+                            }
     
                             // &:hover {
                             //     opacity: .5;
@@ -83,38 +100,87 @@ html {
                         }
     
                         &.hidden {
-                            transform: translate(-20%) scale(.8);
+                          
                             position: absolute;
                             z-index: 98;
 
                             &.right-index {
-                                transform: translate(20%) scale(.8);
+                                transform: translate(15%) scale(.8);
                                 position: absolute;
                                 z-index: 98;
+
+                                @media (min-width: 1149px) {
+                                    transform: translate(20%) scale(.8);
+                                    position: absolute;
+                                    z-index: 98;
+                                }
+                               
                             }
 
                             &.left-index {
-                                transform: translate(-20%) scale(.8);
+                                transform: translate(-15%) scale(.8);
                                 position: absolute;
                                 z-index: 98;
+
+                                @media (min-width: 1149px) {
+                                    transform: translate(-20%) scale(.8);
+                                    position: absolute;
+                                    z-index: 98;
+                                }
+                                
                             }
                     
 
                             &.furthest-right {
-                                transform: translate(40%) scale(.6); 
+                                transform: translate(30%) scale(.6); 
                                 z-index: 97;
                                 opacity: .5;
+                                
+                                @media (min-width: 1149px) {
+                                    transform: translate(40%) scale(.6); 
+                                    z-index: 97;
+                                    opacity: .5;
+                                }
+                            
                             }
 
                             &.furthest-left {
-                                transform: translate(-40%) scale(.6); 
+                                transform: translate(-30%) scale(.6); 
                                 z-index: 97;
                                 opacity: .5;
+
+                                @media (min-width: 1149px) {
+                                    transform: translate(-40%) scale(.6); 
+                                    z-index: 97;
+                                    opacity: .5;
+                                }
+                              
                             }
                         }
 
                         .project-image {
-                            max-width: 800px;
+                            max-width: 300px;
+
+                            @media (min-width: 525px) {
+                                max-width: 400px;
+                            }
+
+                            @media (min-width: 625px) {
+                                max-width: 500px;
+                            }
+
+                            @media (min-width: 729px) {
+                                max-width: 600px;
+                            }
+
+                            @media (min-width: 859px) {
+                                max-width: 700px;
+                            }
+                            
+                            @media (min-width: 985px) {
+                                max-width: 800px;
+                            }
+                           
                         }
     
                         .project-text {

@@ -44,8 +44,8 @@ function toggleActiveClass() {
         }
 
         if (activeSlideIndex === 0) {
-            sliderArray[sliderArray.length - 1].classList.add('furthest-left');
-            sliderArray[sliderArray.length - 2].classList.add('left-index');
+            sliderArray[sliderArray.length - 2].classList.add('furthest-left');
+            sliderArray[sliderArray.length - 1].classList.add('left-index');
         } else if (activeSlideIndex === 1) {
             sliderArray[sliderArray.length - 1].classList.add('furthest-left');
         } else if (activeSlideIndex === 3) {
